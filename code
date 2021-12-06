@@ -1,0 +1,69 @@
+import pyautogui
+import time
+#meeting ID
+meetingID = pyautogui.prompt(text="Enter your meeting ID",title="meeting ID",default='')
+print(meetingID)
+time.sleep(2)
+#press window
+pyautogui.press('win',interval=1)
+time.sleep(2)
+#write chrome
+pyautogui.write("chrome",interval=1)
+time.sleep(2)
+#press enter
+pyautogui.press("enter",interval=1)
+time.sleep(2)
+#write meetingID
+pyautogui.write(meetingID)
+time.sleep(2)
+#press enter
+pyautogui.press("enter",interval=1)
+time.sleep(2)
+#microphone
+pyautogui.click(x=618,y=790)
+time.sleep(2)
+#camera
+pyautogui.click(x=714,y=784)
+time.sleep(3)
+#join now
+pyautogui.click(x=1352,y=613)
+time.sleep(3)
+#caption
+pyautogui.click(x=913,y=981)
+time.sleep(3)
+#present now
+pyautogui.click(x=977,y=983)
+time.sleep(3)
+#choose the option(entire screen)
+pyautogui.click(x=1112,y=804)
+time.sleep(3)
+#select
+pyautogui.click(x=805,y=357)
+time.sleep(3)
+#share
+pyautogui.click(x=1183,y=576)
+time.sleep(5)
+#show everyone
+pyautogui.click(x=1693,y=970)
+time.sleep(4)
+#chat with everyone
+pyautogui.click(x=1747,y=977)
+time.sleep(3)
+#send a message to everyone
+pyautogui.write("hello everyone",interval=1)
+time.sleep(2)
+#send
+pyautogui.press("enter",interval=1)
+time.sleep(2)
+
+##finding the X&Y axes for where cursor is placed by using the below code:
+import pyautogui, sys
+print('Press Ctrl-C to quit.')
+try:
+    while True:
+        x, y = pyautogui.position()
+        positionStr = 'X: ' + str(x).rjust(4) + ' Y: ' + str(y).rjust(4)
+        print(positionStr, end='')
+        print('\b' * len(positionStr), end='', flush=True)
+except KeyboardInterrupt:
+    print('\n')
